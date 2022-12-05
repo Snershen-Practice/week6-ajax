@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/all.css" />
+  </head>
+  <body>
+    <section class="addTicket-area">
+      <div class="addTicket-panel">
+        <div class="addTicket-img">
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/main_img.png?raw=true"
+            alt="banner"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/logo.png?raw=true"
+            alt="LOGO"
+          />
+        </div>
+        <form action="" class="addTicket-form">
+          <h1><i class="fas fa-plus-circle"></i>新增旅遊套票</h1>
+          <div class="addTicket-form-group">
+            <label for="ticketName">套票名稱</label>
+            <input type="text" id="ticketName" placeholder="請填寫套票名稱" />
+          </div>
+          <div class="addTicket-form-group">
+            <label for="ticketImg">圖片網址</label>
+            <input type="text" id="ticketImg" placeholder="請填寫圖片網址" />
+          </div>
+          <div class="addTicket-form-group">
+            <label for="ticketLocation">景點地區</label>
+            <select id="ticketLocation" placeholder="請選擇景點地區">
+              <option value="請選擇景點地區">請選擇景點地區</option>
+              <option value="台北">台北</option>
+              <option value="台中">台中</option>
+              <option value="高雄">高雄</option>
+            </select>
+          </div>
+          <div class="addTicket-form-group">
+            <label for="ticketPrice">套票金額</label>
+            <input type="number" id="ticketPrice" min="0" placeholder="請填寫套票金額" />
+          </div>
+          <div class="addTicket-form-group">
+            <label for="ticketNum">套票組數</label>
+            <input type="number" id="ticketNum" min="0" placeholder="請填寫套票組數" />
+          </div>
+          <div class="addTicket-form-group">
+            <label for="ticketRate">套票星級</label>
+            <input type="number" id="ticketRate" max="10" min="1" placeholder="請填寫套票星級" />
+          </div>
+          <div class="addTicket-form-group">
+            <label for="ticketDescription">套票描述</label>
+            <textarea placeholder="請填寫套票描述（限 100 字）" id="ticketDescription" rows="4"></textarea>
+          </div>
+          <input type="button" value="新增套票" />
+        </form>
+      </div>
+    </section>
+    <main class="ticketResult">
+      <div class="container">
+        <div class="search-group">
+          <select name="location" id="searchMenu">
+            <option value="全部地區">全部地區</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+          </select>
+          <p id="search-num">本次搜尋共 3 筆資料</p>
+        </div>
+        <ul class="ticketCard-area">
+          <li class="ticketCard">
+            <a href="#" class="ticketCard-img">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-location">台北</div>
+            <div class="ticketCard-content">
+              <h2 class="ticketCard-title">綠島自由行套裝行程</h2>
+              <p class="ticketCard-description">
+                嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+              </p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num"><i class="fa-solid fa-circle-exclamation"></i>剩下最後 8 組</p>
+                <p class="ticketCard-price">
+                  TWD
+                  <span>$1,280</span>
+                </p>
+                <div class="ticketCard-rate">8.6</div>
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <a href="#" class="ticketCard-img">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-location">台北</div>
+            <div class="ticketCard-content">
+              <h2 class="ticketCard-title">綠島自由行套裝行程</h2>
+              <p class="ticketCard-description">
+                嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+              </p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num"><i class="fa-solid fa-circle-exclamation"></i>剩下最後 8 組</p>
+                <p class="ticketCard-price">
+                  TWD
+                  <span>$1,280</span>
+                </p>
+                <div class="ticketCard-rate">8.6</div>
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <a href="#" class="ticketCard-img">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-location">台北</div>
+            <div class="ticketCard-content">
+              <h2 class="ticketCard-title">綠島自由行套裝行程</h2>
+              <p class="ticketCard-description">
+                嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+              </p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num"><i class="fa-solid fa-circle-exclamation"></i>剩下最後 8 組</p>
+                <p class="ticketCard-price">
+                  TWD
+                  <span>$1,280</span>
+                </p>
+                <div class="ticketCard-rate">8.6</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

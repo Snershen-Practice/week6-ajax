@@ -1,0 +1,17 @@
+@mixin breakpoint($point) {
+  @if ($point == pad) {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if($point == mobile) {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+}
+
+@mixin grid($col-num, $col-gutter) {
+  width: ($width - ($col-gutter * ($col-num - 1))) / $col-num;
+  padding-right: $col-gutter;
+  padding-left: $col-gutter;
+}

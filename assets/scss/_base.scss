@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  // outline: solid 1px;
+}
+
+body {
+  font-family: $font-style;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  display: inline-block;
+}
